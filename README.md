@@ -14,6 +14,6 @@ docker compose
 ```
 
 Commande pour lancer le projet :
-```shell
+```bash
 docker compose up --build
 ```
