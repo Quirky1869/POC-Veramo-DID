@@ -7,7 +7,7 @@
 
 # Installation
 
-docker compose
+docker-compose.yml
 
 ```yaml
 
