@@ -1,7 +1,7 @@
 # POC-Veramo-DID
 
-## Contributeur
-|Contributeur|
+## Contributeurs
+|Contributeurs|
 |:----------:|
 |Mickael S.|
 |Michael J.|
