@@ -40,7 +40,5 @@ docker compose down
 
 ## Supprimer database
 ```bash
-cd app/
-rm -f database.sqlite
-cd ..
+rm -f app/database.sqlite
 ```
