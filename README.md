@@ -21,6 +21,7 @@ CMD ["npm","run","prod"]
 services:
   app:
     build: .
+    container_name: poc_cont
     ports:
       - 7777:7777
     volumes:
