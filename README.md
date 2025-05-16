@@ -2,6 +2,7 @@
 
 ## Contributeur
 |Contributeur|
+|:----------:|
 |Mickael S.|
 |Michael J.|
 
