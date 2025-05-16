@@ -22,7 +22,8 @@ services:
   app:
     build: .
     ports:
-      - 8080:8080
+      - 7777:7777
     volumes:
       - ./app:/app
+      - /app/node_modules
 ```
