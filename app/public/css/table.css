@@ -1,0 +1,12 @@
+main #container
+{
+    justify-content: end;
+    padding:10px;
+}
+.dataContainer td
+{
+    max-width:calc((100vw - var(--min-nav-size) / 3));
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
