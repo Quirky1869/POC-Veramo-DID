@@ -65,7 +65,6 @@ router.post("/verify",async (req:any, res:any)=>{
     res.status(404).json(response)
 })
 router.get("/code",async (req:any, res:any)=>{
-    console.log("passe")
     const {token} = req.query
     const credential = await getCredentialByToken(token)
     console.log(JSON.stringify(credential,null,2))

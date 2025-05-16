@@ -78,11 +78,13 @@ function createCredentialsTableData(credential)
     REVOKED_TD.innerText = isExpired ? "✔" : "X"
     
     const BUTTONS = document.createElement("td")
-    BUTTONS.classList.add("layoutHorizontal")
+    BUTTONS.classList.add("layoutHorizontal","tableButtons")
 
     const QRCODE_BUTTON = document.createElement("button")
     QRCODE_BUTTON.setAttribute("type","button")
-    QRCODE_BUTTON.innerText = "qr"
+    const QRCODE_ILLUSTRATION = document.createElement("img")
+    QRCODE_ILLUSTRATION.src = "images/qrcode.svg"
+    QRCODE_BUTTON.appendChild(QRCODE_ILLUSTRATION)
     QRCODE_BUTTON.addEventListener("click",()=>{
         getQrCode(ID_TD.innerText)
     })
@@ -91,7 +93,9 @@ function createCredentialsTableData(credential)
     const DELETE_BUTTON = document.createElement("button")
     DELETE_BUTTON.classList.add("cancelButton")
     DELETE_BUTTON.setAttribute("type","button")
-    DELETE_BUTTON.innerText = "del"
+    const DELETE_BUTTON_ILLUSTRATION = document.createElement("img")
+    DELETE_BUTTON_ILLUSTRATION.src = "images/trash_bin.svg"
+    DELETE_BUTTON.appendChild(DELETE_BUTTON_ILLUSTRATION)
     DELETE_BUTTON.addEventListener("click",async ()=>{
         const res = await delete_credential(ID_TD.innerText)
         if(res.status == 204)

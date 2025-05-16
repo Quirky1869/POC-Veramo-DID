@@ -83,7 +83,6 @@ export async function verifyCredential()
             if(message.includes("expired"))
             {
                 const EXP_REG = new RegExp("(?<=exp\:\ ).*?(?=\ )")
-                console.log(EXP_REG.exec(message)[0])
                 const expirationDate = new Date(EXP_REG.exec(message)[0] * 1000).toLocaleDateString()
                 ERROR_MESSAGE.innerText = `Cette accréditation existe mais n'est plus valide depuis le ${expirationDate}`
             }

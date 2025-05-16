@@ -20,7 +20,7 @@ app.use(express.static("public"))
 
 
 
-const PORT = 8080
+const PORT = 7777
 app.get("/",(req:any,res:any)=>{
     res.render("index")
 })

@@ -44,7 +44,7 @@ async function loadModuleContent(moduleName)
 		console.log(err)
 	}
 }
-let actualContent = "credential"
+let actualContent = "did"
 setActive(document.querySelector(`button[data-fetch='${actualContent}']`),actualContent)
 
 

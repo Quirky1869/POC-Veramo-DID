@@ -74,14 +74,16 @@ async function buildTableData(did)
     
     const CREDENTIALS = document.createElement("td")
     const count = await getCredentialCount(did.did)
-    console.log(count)
     CREDENTIALS.innerText = count
 
     const BUTTONS = document.createElement("td")
+    BUTTONS.classList.add("layoutHorizontal","tableButtons")
     const DELETE_BUTTON = document.createElement("button")
     DELETE_BUTTON.classList.add("cancelButton")
     DELETE_BUTTON.setAttribute("type","button")
-    DELETE_BUTTON.innerText = "Effacer"
+    const DELETE_BUTTON_ILLUSTRATION = document.createElement("img")
+    DELETE_BUTTON_ILLUSTRATION.src = "images/trash_bin.svg"
+    DELETE_BUTTON.appendChild(DELETE_BUTTON_ILLUSTRATION)
     DELETE_BUTTON.addEventListener("click",async ()=>{
         const OPTIONS = {
             method:"DELETE",
