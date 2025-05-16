@@ -27,3 +27,20 @@ services:
       - ./app:/app
       - /app/node_modules
 ```
+
+## Lancer
+```bash
+docker compose up --build
+```
+
+## Arreter
+```bash
+docker compose down
+```
+
+## Supprimer database
+```bash
+cd app/
+rm -f database.sqlite
+cd ..
+```
